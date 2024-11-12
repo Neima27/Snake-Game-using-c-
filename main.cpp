@@ -32,6 +32,17 @@ snakesDirection sDir;
 // boolean variable for checking game is over or not
 bool isGameOver;
 
+// Function to initialize game variables
+void GameInit()
+{
+    isGameOver = false;
+    sDir = STOP;
+    x = width / 2;
+    y = height / 2;
+    fruitCordX = rand() % width;
+    fruitCordY = rand() % height;
+    playerScore = 0;
+}
 
 // Function to set the game difficulty level
 int SetDifficulty()
@@ -58,17 +69,6 @@ int SetDifficulty()
     return dfc;
 }
 
-// Function to initialize game variables
-void GameInit()
-{
-    isGameOver = false;
-    sDir = STOP;
-    x = width / 2;
-    y = height / 2;
-    fruitCordX = rand() % width;
-    fruitCordY = rand() % height;
-    playerScore = 0;
-}
 
 // Function for creating the game board & rendering
 // Function to handle user UserInput
