@@ -71,3 +71,23 @@ void UserInput()
     }
 }
 
+=======
+// Main function / game looping function
+int main()
+{
+    string playerName;
+    cout << "enter your name: ";
+    cin >> playerName;
+    int dfc = SetDifficulty();
+
+    GameInit();
+    while (!isGameOver) {
+        GameRender(playerName);
+        UserInput();
+        UpdateGame();
+        // creating a delay for according to the chosen
+        // difficulty
+        Sleep(dfc);
+    }
+
+    return 0;
